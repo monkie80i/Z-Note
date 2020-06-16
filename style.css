@@ -1,0 +1,522 @@
+/****************
+Reset
+****************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  	line-height: 1.4;
+  	font-family: 'Roboto', sans-serif;
+  	color: #EEEEEE;
+	background-color: #383737;
+
+}
+
+
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:focus {
+  outline: none;
+}
+strong {
+  font-weight: bold; 
+}
+
+a {
+	text-decoration: none;
+	 color : #EEEEEE;
+}
+/* micro clear fix */
+.grouping:before,
+.grouping:after {
+  content: " ";
+  display: table; 
+}
+.grouping:after {
+  clear: both; 
+}
+img, iframe, video, object {
+  max-width: 100%; 
+}
+/***************
+Global
+***************/
+::-moz-selection {
+  background-color: #ffffff; 
+  color: #383737;
+}
+::selection {
+  background-color: #ffffff;
+  color: #383737; 
+}
+
+.wrapper {
+  width:960px;
+  margin: 0 auto;
+}
+/********begin*******/
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex-row {
+	display: flex;
+	align-items: center;
+}
+
+
+/***** circle*******/
+.circleBtn {
+	background-color: rgba(157, 164, 166,0.25);
+	box-shadow:inset -1px -1px 4px 0px #ffffff3b;
+	
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	right: 2rem;
+	bottom: 2rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circleBtn a {
+	font-size: 3rem;
+	color : #11B0D3;
+	font-weight: bolder;
+}
+
+
+/***** search ****/
+.search{
+	margin-top: 5vw;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.search img {
+	height: 5vw;
+	margin-right: 5vw;
+
+}
+
+input {
+	background-color: transparent;
+	color:#EEEEEE;
+	border:none;
+	width: 60%;
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+/***** feed****/
+.feed-container {
+	width:100%;
+}
+ul.feed{
+	margin-top: 5vw;
+}
+
+.feed {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.feed > .note {
+	box-sizing: border-box;
+	width: 80%;
+	border: 1px solid #A4A4A4;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.note > h6 {
+	margin-bottom: 5px;
+	font-size: 7vw;
+	overflow-wrap: break-word;
+}
+
+.note > p {
+	font-size: 4vw;
+	margin-bottom: 15px;
+}
+/****** side Nav****/
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #383737; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20vw; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 5vw;
+  font-weight: bolder;
+  color : #11B0D3;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:nth-child(2){
+	color : #383737;
+	margin-right: 100px;
+	border-bottom-right-radius: 25px;
+	border-top-right-radius: 25px;
+	background-color:#11B0D3 ; 
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/******** noke make View ****/
+#note-view{
+	height: 100%;
+	margin-top: 4vw;
+	margin-bottom: 30px;
+	justify-content: space-between;
+}
+
+
+.nav {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	background-color:#383737; 
+}
+
+.nav > a > img {
+	width: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.last-mod {
+	font-size: 15px;
+	color: white;
+}
+
+.top {
+	top:0;
+	padding: 5vw 3vw;
+	z-index: 5;
+}
+
+.bottom {
+	padding: 1rem 1rem;
+	bottom: 0;
+	z-index: 6;
+}
+
+/****** note form ******/
+#note-form {
+	margin-top: 60px;
+
+	
+}
+
+#note-form > form {
+	margin: 0 10vw;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+#note-form > form > input {
+	font-size: 8vw;
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+/* different classes for each bg color of note(form element in note view);*/
+
+#note-form > form > input::placeholder {
+	color: #EEEEEE;
+}
+
+
+
+textarea {
+	background-color: inherit;
+	border:none;
+	width: 100%;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	color: #EEEEEE;
+	font-size: 5vw;
+	resize: none;
+}
+
+textarea::placeholder {
+	font-family: 'Roboto', sans-serif;
+	color: #EEEEEE;
+	font-size: 5vw;
+}
+
+/***** drop up ***/
+.dropUpContainer {
+	display: none;
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+}
+
+.dropUp {
+	position: fixed;
+	width: 100%;
+	box-shadow: 1px 3px 9px black;
+	background-color: #383737;
+	overflow: hidden;/*this is the one that enables width to be 0;*/
+
+}
+
+#moreMenu,#addMenu {
+	height: 0;
+}
+
+#addMenu {
+	bottom: 60px;
+}
+#moreMenu{
+    bottom: 58px;
+}
+
+#more-archive {
+	margin-bottom: 20px;
+}
+
+.dropUp a {
+	display: block;
+	margin-left: 20px;
+	padding: 5px 0;
+}
+.dropUp a:first-child {
+	padding-top: 10px;
+}
+
+
+.inline-logo {
+	font-size: 22px;
+	padding-right: 10px;
+
+}
+
+.colorCircle {
+	display: inline-block;
+	background-color: white;
+	width: 10vw;
+	height:10vw;
+	border-radius: 50%;
+	margin-left: 4vw;
+	border: 1px solid #A4A4A4;
+	cursor:pointer;
+}
+
+.currentColor {
+	box-shadow: 0 0 3px #11b0d3;
+}
+
+.default{
+	background-color:#383737;
+}
+.red{
+	background-color:#7d1919  ;
+}
+.purple{
+	background-color:#7d1976 ;
+}
+.blue{
+	background-color:#19587d ;
+}
+.green{
+	background-color:#197d21 ;
+}
+.yellow{
+	background-color:#7d7619 ;
+}
+
+.colorCircle:hover {
+	box-shadow: 0 0 3px #fdfdfd;
+}
+
+/**************/
+#archive-view .feed {
+	padding-top: 70px;
+}
+#trash-view .feed {
+	padding-top: 70px;
+}
+
+.about {
+    margin-top: 40vw;
+    font-size: 7vw;
+	color: #fff; 
+}
+
+/***** media query ****/
+@media screen and (min-width: 900px) {
+
+	.home,#archive-view,#note-view,#trash-view {
+  		width: 60%;
+  		margin: auto;
+  	}
+
+  	.search{
+		margin-top: 3vw;
+	}
+
+	.search img {
+		height: 3vw;
+		margin-right: 5vw;
+	}
+
+	.feed > .note {
+		padding: 30px;
+		margin-bottom: 5vw;
+	}
+
+	.note > h6 {
+		margin-bottom: 5px;
+		font-size: 5vw;
+	}
+
+	.note > p {
+		font-size: 2vw;
+		margin-bottom: 15px;
+	}	
+
+	/**** sidenav***/
+	.sidenav {
+  		padding-top: 10vw; /* Place content 60px from the top */
+	}
+
+	.sidenav a {
+  		padding: 8px 8px 8px 300px;
+  		font-size: 3vw;
+	}
+
+	.sidenav a:nth-child(2){
+		margin-right: 300px;
+		border-bottom-right-radius: 60px;
+    	border-top-right-radius: 60px;
+    }
+
+	.sidenav .closebtn {
+		font-size: 50px;
+	}
+	/**** note View */
+	
+	.nav {
+		justify-content: space-around;
+	}
+	.top {
+	padding: 2vw 3vw;
+	}
+	.last-mod {
+	display: none;
+	}
+	
+	/****** note form ******/
+	#note-form > form {
+    	margin: 3vw 6vw;
+	}
+
+	#note-form > form > input {
+		font-size: 5vw;
+		margin-bottom: 20px;
+		margin-top: 20px;
+    
+	}
+
+	textarea {
+		font-size: 2vw;
+	}
+
+	textarea::placeholder {
+		font-size: 2vw;
+	} 
+	/********more********/
+	.colorCircle {
+	width: 4vw;
+	height:4vw;
+	margin-left: 3vw;
+	} 
+	/*** about***/
+	.about {
+    margin-top: 15vw;
+	}
+}
